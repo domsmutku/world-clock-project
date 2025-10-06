@@ -18,6 +18,15 @@ function updateTime() {
     parisDate.innerHTML = moment().format("MMMM Do YYYY");
     parisTime.innerHTML = parisTiming.format("h:mm:ss [<small>]A[</small>]");
   }
+
+  let londonElement = document.querySelector("#london");
+  if (londonElement) {
+    let londonDate = londonElement.querySelector(".date");
+    let londonTime = londonElement.querySelector(".time");
+    let londonTiming = moment().tz("Europe/London");
+    londonDate.innerHTML = moment().format("MMMM Do YYYY");
+    londonTime.innerHTML = londonTiming.format("h:mm:ss [<small>]A[</small>]");
+  }
 }
 
 function updateCity(event) {
